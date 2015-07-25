@@ -1,0 +1,49 @@
+<!doctype.html>
+<html ng-app="searchHotels">
+    
+    <head>
+        <script type="text/javascript" src="angular.min.js"></script>
+        <script type="text/javascript" src="scopetry2.js"></script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    </head>
+    
+    <body ng-controller="PlaceController as alias">
+        
+        <h2>{{"Look for Hotels with the kind of location you want"}}</h2>
+        <h3>{{"(For example, all hotels in a particular city which have a supermarket within 40 metres)"}}</h3>
+        
+        <form name="City">
+            <input type="text" placeholder="Enter city" ng-model="city">
+        </form>
+        
+        <form name="Criteria" ng-submit="addPlace()">
+            I want <select ng-model="newPlace.name">
+            <option value='supermarket'>Supermarket</option>
+            <option value='convenience'>Convenience Store</option>
+            <option value='restaurant'>Restaurant</option>
+            </select> within <input type="number" min="1" max="100000" ng-model="newPlace.distance">m <input type="submit" value="Submit">
+        </form>
+        
+        <div style="float: left">
+            <h5 ng-repeat="x in places">All hotels in {{city}} which have {{x.name}} within {{x.distance}}m. <br> Please wait... <br>MUST refresh page before searching again. :)</h5>
+                
+            <ul ng-hide="locations.length === 0">
+                <li ng-repeat="y in spots track by $index" ng-hide="!y">{{y}}</li>
+            </ul>
+            
+            <h5 style="color:red">{{message}}</h5>
+            
+            <div>
+                <div id="map-canvas" style="width: 500px; height: 400px;"></div>
+            </div>
+        </div>
+        
+        <div style="float: right">
+            <h2 style="color:green">If this doesn't help, send an email to "gameflossinc@gmail.com", and I'll personally find what you're looking for, with anything else you might need help with, for free.</h2>
+        </div>
+        
+    </body>
+    
+    
+    
+</html>
