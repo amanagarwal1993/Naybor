@@ -21,3 +21,5 @@ After this, the front-end uses an `ng-repeat` to display a list of all hotel nam
 
 ## License
 [GNU General Public License](http://choosealicense.com/licenses/gpl-3.0/#)
+
+I wrote this README using [Dillinger.io](http://dillinger.io) Markdown editor. Great tool!
