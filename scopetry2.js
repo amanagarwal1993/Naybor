@@ -49,15 +49,7 @@
                 
             });
             
-     /*       for(var i=0; i< $scope.locations.length; i++) {
-                var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng($scope.locations[i][0], $scope.locations[i][1]),
-                    map: map,
-                    title: $scope.spots.name
-                });
-                marker.setMap(map);
-            };
-*/       };
+        };
         
         function initialize() {
         var mapCanvas = document.getElementById("map-canvas");
@@ -80,9 +72,6 @@
                 });
             };
         };
-        
-        //google.maps.event.addDomListener(window, 'load', initialize);
-    
         
         
     }] );
