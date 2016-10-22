@@ -3,6 +3,9 @@ Naybor is an app used to search for hotels in any city which meet **one** major 
 
 For example, you may say "Find me all the hotels in *Paris* that have a *supermarket* within *20 metres*." This crude little app will allow you to make queries like these.
 
+## How to use the app
+Open scopetry.html in a browser (the weird name of this file is a long story). Type in the name of the city, choose one amenity name and then specify the number of meters (eg 100, 50) from the hotel within which you need the amenity.
+
 ## Usage
 ##### APIs and Frameworks
 The app was written in **AngularJs**. For fetching locations, it uses **Overpass API**, which uses OpenStreetMaps data. It then displays them on a map created using **Google Maps API**.
